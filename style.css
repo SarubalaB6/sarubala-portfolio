@@ -7736,3 +7736,414 @@ html {
     animation: none;
   }
 }
+
+/* ==========================================
+   PORTFOLIO - UNIVERSAL SECTION HEADINGS
+========================================== */
+
+:root {
+    --un-purple: #a47aff;
+    --un-cyan: #28d9ff;
+    --un-white: #f7f6ff;
+    --un-muted: #b6b4d0;
+}
+
+/* Center the heading container */
+section .section-heading,
+section .section-title,
+section .projects-heading,
+section .skills-new-header,
+section .skills-heading,
+section .about-heading,
+section .analytics-heading,
+section .contact-heading,
+section .certificates-heading,
+section .journey-heading {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 92%);
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+/* Common small label */
+section .section-heading > span:first-child,
+section .section-title > span:first-child,
+section .projects-label,
+section .skills-eyebrow,
+section .eyebrow,
+section .section-eyebrow,
+section .about-eyebrow,
+section .analytics-eyebrow,
+section .contact-eyebrow,
+section .certificates-eyebrow,
+section .journey-eyebrow {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #c4b0ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+
+/* Decorative lines around the small label */
+section .section-heading > span:first-child::before,
+section .section-heading > span:first-child::after,
+section .section-title > span:first-child::before,
+section .section-title > span:first-child::after,
+section .projects-label::before,
+section .projects-label::after,
+section .skills-eyebrow::before,
+section .skills-eyebrow::after,
+section .eyebrow::before,
+section .eyebrow::after,
+section .section-eyebrow::before,
+section .section-eyebrow::after,
+section .about-eyebrow::before,
+section .about-eyebrow::after,
+section .analytics-eyebrow::before,
+section .analytics-eyebrow::after,
+section .contact-eyebrow::before,
+section .contact-eyebrow::after,
+section .certificates-eyebrow::before,
+section .certificates-eyebrow::after,
+section .journey-eyebrow::before,
+section .journey-eyebrow::after {
+    content: "";
+    display: block;
+    flex: 0 0 36px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--un-purple),
+        var(--un-cyan)
+    );
+    box-shadow: 0 0 10px #9b5cff55;
+}
+
+/* Large heading */
+section .section-heading h2,
+section .section-title h2,
+section .projects-heading h2,
+section .skills-header-left h2,
+section .skills-heading h2,
+section .about-heading h2,
+section .analytics-heading h2,
+section .contact-heading h2,
+section .certificates-heading h2,
+section .journey-heading h2 {
+    margin: 0;
+    color: var(--un-white);
+    font-size: clamp(36px, 5vw, 66px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    text-align: center;
+}
+
+/* Gradient highlight */
+section .section-heading h2 span,
+section .section-title h2 span,
+section .projects-heading h2 span,
+section .skills-header-left h2 span,
+section .skills-heading h2 span,
+section .about-heading h2 span,
+section .analytics-heading h2 span,
+section .contact-heading h2 span,
+section .certificates-heading h2 span,
+section .journey-heading h2 span {
+    background: linear-gradient(
+        100deg,
+        #a47aff,
+        #7d83ff,
+        #28d9ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Description */
+section .section-heading > p,
+section .section-title > p,
+section .projects-subtitle,
+section .skills-header-left > p,
+section .skills-heading > p,
+section .about-heading > p,
+section .analytics-heading > p,
+section .contact-heading > p,
+section .certificates-heading > p,
+section .journey-heading > p {
+    max-width: 680px;
+    margin: 20px auto 0;
+    color: var(--un-muted);
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Skills heading uses its own left wrapper */
+.skills-new-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.skills-header-left {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+}
+
+.skills-filter {
+    justify-content: center;
+}
+
+/* Matching section glow */
+section:not(.hero):not(.home) {
+    position: relative;
+}
+
+section:not(.hero):not(.home)::before {
+    pointer-events: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    section .section-heading,
+    section .section-title,
+    section .projects-heading,
+    section .skills-new-header,
+    section .skills-heading,
+    section .about-heading,
+    section .analytics-heading,
+    section .contact-heading,
+    section .certificates-heading,
+    section .journey-heading {
+        width: 92%;
+        margin-bottom: 35px;
+    }
+
+    section .section-heading h2,
+    section .section-title h2,
+    section .projects-heading h2,
+    section .skills-header-left h2,
+    section .skills-heading h2,
+    section .about-heading h2,
+    section .analytics-heading h2,
+    section .contact-heading h2,
+    section .certificates-heading h2,
+    section .journey-heading h2 {
+        font-size: clamp(32px, 8vw, 46px);
+        letter-spacing: -0.8px;
+    }
+
+    section .section-heading > p,
+    section .section-title > p,
+    section .projects-subtitle,
+    section .skills-header-left > p,
+    section .skills-heading > p,
+    section .about-heading > p,
+    section .analytics-heading > p,
+    section .contact-heading > p,
+    section .certificates-heading > p,
+    section .journey-heading > p {
+        font-size: 13px;
+    }
+
+    section .skills-eyebrow,
+    section .projects-label,
+    section .eyebrow,
+    section .section-eyebrow,
+    section .about-eyebrow,
+    section .analytics-eyebrow,
+    section .contact-eyebrow,
+    section .certificates-eyebrow,
+    section .journey-eyebrow {
+        gap: 7px;
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+}
+
+/* ABOUT + ANALYTICS + CONTACT HEADING ALIGNMENT */
+
+#about .section-heading,
+#about .section-title,
+#analytics .section-heading,
+#analytics .section-title,
+#contact .section-heading,
+#contact .section-title,
+.about-heading,
+.analytics-heading,
+.contact-heading {
+    width: min(900px, 92%);
+    margin: 0 auto 50px !important;
+    text-align: center !important;
+}
+
+#about .section-heading h2,
+#about .section-title h2,
+#analytics .section-heading h2,
+#analytics .section-title h2,
+#contact .section-heading h2,
+#contact .section-title h2,
+.about-heading h2,
+.analytics-heading h2,
+.contact-heading h2 {
+    text-align: center !important;
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: 1.12;
+    color: #f7f6ff;
+}
+
+#about .section-heading p,
+#about .section-title p,
+#analytics .section-heading p,
+#analytics .section-title p,
+#contact .section-heading p,
+#contact .section-title p,
+.about-heading p,
+.analytics-heading p,
+.contact-heading p {
+    max-width: 680px;
+    margin: 20px auto 0 !important;
+    text-align: center !important;
+    line-height: 1.8;
+    color: #b6b4d0;
+}
+
+/* Small label with decorative lines */
+#about .section-label,
+#analytics .section-label,
+#contact .section-label,
+.about-label,
+.analytics-label,
+.contact-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    color: #c4b0ff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#about .section-label::before,
+#about .section-label::after,
+#analytics .section-label::before,
+#analytics .section-label::after,
+#contact .section-label::before,
+#contact .section-label::after,
+.about-label::before,
+.about-label::after,
+.analytics-label::before,
+.analytics-label::after,
+.contact-label::before,
+.contact-label::after {
+    content: "";
+    width: 36px;
+    height: 1px;
+    background: linear-gradient(90deg, #a47aff, #28d9ff);
+}
+
+@media (max-width: 600px) {
+    #about .section-heading h2,
+    #about .section-title h2,
+    #analytics .section-heading h2,
+    #analytics .section-title h2,
+    #contact .section-heading h2,
+    #contact .section-title h2,
+    .about-heading h2,
+    .analytics-heading h2,
+    .contact-heading h2 {
+        font-size: clamp(32px, 8vw, 46px);
+    }
+}
+
+/* =========================================
+   DATA MINDSET — CERTIFICATES LABEL DESIGN
+========================================= */
+
+/* Small label above "Learning Through Data" */
+#analytics .section-subtitle,
+#analytics .section-label,
+#analytics .eyebrow,
+#analytics .analytics-label,
+#analytics .analytics-eyebrow,
+#analytics .analytics-kicker,
+#analytics .section-tag {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    width: fit-content;
+    margin: 0 auto 18px !important;
+    color: #c4b0ff !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase;
+}
+
+/* Decorative lines on both sides */
+#analytics .section-subtitle::before,
+#analytics .section-subtitle::after,
+#analytics .section-label::before,
+#analytics .section-label::after,
+#analytics .eyebrow::before,
+#analytics .eyebrow::after,
+#analytics .analytics-label::before,
+#analytics .analytics-label::after,
+#analytics .analytics-eyebrow::before,
+#analytics .analytics-eyebrow::after,
+#analytics .analytics-kicker::before,
+#analytics .analytics-kicker::after,
+#analytics .section-tag::before,
+#analytics .section-tag::after {
+    content: "" !important;
+    display: block !important;
+    width: 38px !important;
+    height: 1px !important;
+    flex: 0 0 38px !important;
+    background: linear-gradient(
+        90deg,
+        #9b5cff,
+        #28d9ff
+    ) !important;
+    box-shadow: 0 0 10px #9b5cff55;
+}
+
+/* Keep the analytics heading centered */
+#analytics h1,
+#analytics h2 {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #analytics .section-subtitle::before,
+    #analytics .section-subtitle::after,
+    #analytics .section-label::before,
+    #analytics .section-label::after,
+    #analytics .eyebrow::before,
+    #analytics .eyebrow::after,
+    #analytics .analytics-label::before,
+    #analytics .analytics-label::after,
+    #analytics .analytics-eyebrow::before,
+    #analytics .analytics-eyebrow::after,
+    #analytics .analytics-kicker::before,
+    #analytics .analytics-kicker::after,
+    #analytics .section-tag::before,
+    #analytics .section-tag::after {
+        width: 24px !important;
+        flex-basis: 24px !important;
+    }
+}
